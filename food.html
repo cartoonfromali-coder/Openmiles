@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Food | Open Mile</title>
+  <meta name="description" content="Explore practical food guides, easy meal ideas, kitchen inspiration, ingredient tips, and everyday cooking notes from Open Mile.">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f6fafb;
+      color: #46575c;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 70px 24px 90px;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin-bottom: 45px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #287786;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 15px;
+      color: #173b46;
+      font-size: 42px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .intro p {
+      margin: 0;
+      color: #728087;
+      font-size: 16px;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+      padding: 28px;
+      background: #fff;
+      border: 1px solid #dce7e8;
+      border-radius: 16px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(23, 59, 70, .07);
+    }
+
+    .article-number {
+      margin-bottom: 18px;
+      color: #7fa1aa;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .article-card h2 {
+      margin: 0 0 12px;
+      color: #173b46;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .article-card p {
+      margin: 0 0 22px;
+      color: #728087;
+      font-size: 14px;
+    }
+
+    .read-more {
+      margin-top: auto;
+      color: #287786;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    @media (max-width: 900px) {
+      .article-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .page-wrap { padding: 45px 18px 65px; }
+      h1 { font-size: 34px; }
+      .article-grid { grid-template-columns: 1fr; }
+      .article-card { min-height: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <main class="page-wrap">
+
+    <section class="intro">
+      <p class="eyebrow">Open Mile</p>
+      <h1>Food</h1>
+      <p>
+        Useful food ideas for everyday routines, from quick meals and smart
+        shopping to simple cooking habits and ingredients worth exploring.
+      </p>
+    </section>
+
+    <section class="article-grid">
+
+      <a href="food-quick-meals-for-days-on-the-go.html" class="article-card">
+        <span class="article-number">01</span>
+        <h2>Quick Meals for Days on the Go</h2>
+        <p>Practical meal ideas for days when your schedule leaves little time for sitting down to cook.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-how-to-shop-for-a-week-of-easier-meals.html" class="article-card">
+        <span class="article-number">02</span>
+        <h2>How to Shop for a Week of Easier Meals</h2>
+        <p>Plan a more useful grocery shop by thinking about meals, ingredients, and leftovers together.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-ingredients-to-keep-ready-for-last-minute-dinners.html" class="article-card">
+        <span class="article-number">03</span>
+        <h2>Ingredients to Keep Ready for Last-Minute Dinners</h2>
+        <p>A selection of dependable staples that can help turn a rushed evening into a workable meal.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-simple-lunch-ideas-for-a-change-of-pace.html" class="article-card">
+        <span class="article-number">04</span>
+        <h2>Simple Lunch Ideas for a Change of Pace</h2>
+        <p>Easy midday combinations when you want something different from your usual lunch routine.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-how-to-get-more-from-your-kitchen-staples.html" class="article-card">
+        <span class="article-number">05</span>
+        <h2>How to Get More From Your Kitchen Staples</h2>
+        <p>Make everyday ingredients more versatile by using them across different meals and cooking styles.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-easy-breakfasts-for-early-mornings.html" class="article-card">
+        <span class="article-number">06</span>
+        <h2>Easy Breakfasts for Early Mornings</h2>
+        <p>Simple options for mornings when you need breakfast to be quick, practical, and satisfying.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-how-to-make-a-grocery-shop-last-longer.html" class="article-card">
+        <span class="article-number">07</span>
+        <h2>How to Make a Grocery Shop Last Longer</h2>
+        <p>Practical planning habits for getting more useful meals from the food you already bought.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-simple-ways-to-add-flavour-at-home.html" class="article-card">
+        <span class="article-number">08</span>
+        <h2>Simple Ways to Add Flavour at Home</h2>
+        <p>Explore everyday additions that can make familiar meals more interesting without complicated recipes.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-what-to-cook-with-a-nearly-empty-fridge.html" class="article-card">
+        <span class="article-number">09</span>
+        <h2>What to Cook With a Nearly Empty Fridge</h2>
+        <p>Flexible ideas for making a useful meal when the next grocery trip is still a little way off.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-small-preparation-habits-that-make-dinner-easier.html" class="article-card">
+        <span class="article-number">10</span>
+        <h2>Small Preparation Habits That Make Dinner Easier</h2>
+        <p>Simple preparation steps that can make the evening cooking routine smoother and faster.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-weekend-meal-ideas-for-a-change-of-routine.html" class="article-card">
+        <span class="article-number">11</span>
+        <h2>Weekend Meal Ideas for a Change of Routine</h2>
+        <p>Move away from weekday habits with relaxed food ideas suited to slower weekend schedules.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+      <a href="food-how-to-build-a-kitchen-routine-that-works.html" class="article-card">
+        <span class="article-number">12</span>
+        <h2>How to Build a Kitchen Routine That Works</h2>
+        <p>Create a practical rhythm around shopping, preparation, cooking, and cleanup that suits your week.</p>
+        <span class="read-more">Read Article →</span>
+      </a>
+
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+
+</body>
+</html>

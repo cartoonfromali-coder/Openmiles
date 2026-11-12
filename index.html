@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Open Mile | Ideas for Curious Explorers</title>
+
+  <meta
+    name="description"
+    content="Explore ideas across fashion, food, travel, nature and quotes with Open Mile."
+  >
+
+  <style>
+    :root {
+      --primary: #173B46;
+      --secondary: #287786;
+      --accent: #D89A57;
+      --light: #EAF3F4;
+      --lighter: #F7FAFA;
+      --white: #FFFFFF;
+      --text: #314348;
+      --muted: #718084;
+      --border: #DCE7E8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--lighter);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 125px 24px 115px;
+      background:
+        linear-gradient(
+          120deg,
+          #E5F0F2 0%,
+          #F7FAFA 60%,
+          #EEF2ED 100%
+        );
+    }
+
+    .hero-content {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: var(--secondary);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0 0 23px;
+      color: var(--primary);
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 0 34px;
+      color: #5E6C70;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-button,
+    .cta-button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 30px;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .hero-button:hover,
+    .cta-button:hover {
+      transform: translateY(-2px);
+      background: var(--secondary);
+    }
+
+    .intro-section {
+      padding: 95px 24px 40px;
+    }
+
+    .intro-content {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-content h2,
+    .section-heading h2,
+    .bottom-cta h2 {
+      margin: 0 0 17px;
+      color: var(--primary);
+      font-size: clamp(31px, 4vw, 49px);
+      line-height: 1.12;
+      letter-spacing: -1px;
+    }
+
+    .intro-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .niches-section {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 70px 24px 105px;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 44px;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .niche-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .niche-card {
+      min-height: 325px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      transition: .25s ease;
+    }
+
+    .niche-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(23, 59, 70, .09);
+    }
+
+    .niche-card:nth-child(5) {
+      grid-column: span 2;
+    }
+
+    .niche-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .niche-content {
+      max-width: 530px;
+      margin-top: 56px;
+    }
+
+    .niche-label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--secondary);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .niche-content h3 {
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    .niche-content p {
+      margin: 0 0 23px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .niche-content a {
+      color: var(--secondary);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .fashion-card {
+      background: #F8F3F6;
+    }
+
+    .food-card {
+      background: #FAF4EB;
+    }
+
+    .travel-card {
+      background: #EAF5F6;
+    }
+
+    .nature-card {
+      background: #EFF5EB;
+    }
+
+    .quotes-card {
+      background: #F3F1F8;
+    }
+
+    .bottom-cta {
+      max-width: 1140px;
+      margin: 0 auto 90px;
+      padding: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      border-radius: 18px;
+      background: var(--light);
+    }
+
+    .bottom-cta-content {
+      max-width: 690px;
+    }
+
+    .bottom-cta h2 {
+      margin-bottom: 12px;
+    }
+
+    .bottom-cta p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 85px 20px 80px;
+      }
+
+      .niche-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .niche-card:nth-child(5) {
+        grid-column: span 1;
+      }
+
+      .bottom-cta {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 38px 28px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+      }
+
+      .intro-section {
+        padding: 70px 20px 30px;
+      }
+
+      .niches-section {
+        padding: 55px 20px 75px;
+      }
+
+      .niche-card {
+        min-height: 300px;
+        padding: 26px;
+      }
+
+      .niche-content {
+        margin-top: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          Open Mile
+        </span>
+
+        <h1>
+          Follow your curiosity a little further.
+        </h1>
+
+        <p>
+          Discover interesting ideas, useful inspiration and fresh
+          perspectives across a collection of everyday subjects.
+        </p>
+
+        <a href="#topics" class="hero-button">
+          Explore Ideas
+        </a>
+
+      </div>
+    </section>
+
+
+    <section class="intro-section">
+
+      <div class="intro-content">
+
+        <span class="eyebrow">
+          Open Your World
+        </span>
+
+        <h2>
+          A starting point for your next discovery.
+        </h2>
+
+        <p>
+          Some days call for a new destination, others for a good meal,
+          a change of style, a quiet outdoor moment or simply the right words.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="niches-section" id="topics">
+
+      <div class="section-heading">
+
+        <span class="eyebrow">
+          Five Directions
+        </span>
+
+        <h2>
+          Where would you like to go?
+        </h2>
+
+        <p>
+          Choose a subject and begin exploring a collection of ideas made
+          for curious readers.
+        </p>
+
+      </div>
+
+
+      <div class="niche-grid">
+
+        <article class="niche-card fashion-card">
+          <div class="niche-number">01</div>
+
+          <div class="niche-content">
+            <span class="niche-label">Fashion</span>
+
+            <h3>
+              Explore style beyond the obvious.
+            </h3>
+
+            <p>
+              Discover practical clothing ideas, outfit inspiration and
+              different ways to think about your personal style.
+            </p>
+
+            <a href="fashion.html">
+              Go to Fashion →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="niche-card food-card">
+          <div class="niche-number">02</div>
+
+          <div class="niche-content">
+            <span class="niche-label">Food</span>
+
+            <h3>
+              Find something new for your next meal.
+            </h3>
+
+            <p>
+              Explore food ideas, ingredients, meal inspiration and
+              simple thoughts for making everyday eating more interesting.
+            </p>
+
+            <a href="food.html">
+              Go to Food →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="niche-card travel-card">
+          <div class="niche-number">03</div>
+
+          <div class="niche-content">
+            <span class="niche-label">Travel</span>
+
+            <h3>
+              Think beyond the usual itinerary.
+            </h3>
+
+            <p>
+              Find inspiration for destinations, short breaks, planning
+              ideas and memorable travel experiences.
+            </p>
+
+            <a href="travel.html">
+              Go to Travel →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="niche-card nature-card">
+          <div class="niche-number">04</div>
+
+          <div class="niche-content">
+            <span class="niche-label">Nature</span>
+
+            <h3>
+              Look closer at the world around you.
+            </h3>
+
+            <p>
+              Discover outdoor inspiration, natural details, seasonal
+              moments and simple ways to spend time outside.
+            </p>
+
+            <a href="nature.html">
+              Go to Nature →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="niche-card quotes-card">
+          <div class="niche-number">05</div>
+
+          <div class="niche-content">
+            <span class="niche-label">Quotes</span>
+
+            <h3>
+              Find words that stay with you.
+            </h3>
+
+            <p>
+              Explore thoughtful words and perspectives about life,
+              motivation, change, confidence and everyday moments.
+            </p>
+
+            <a href="quotes.html">
+              Go to Quotes →
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="bottom-cta">
+
+      <div class="bottom-cta-content">
+
+        <span class="eyebrow">
+          Your Next Discovery
+        </span>
+
+        <h2>
+          Take the next interesting turn.
+        </h2>
+
+        <p>
+          Explore a topic that catches your attention and see where
+          the next idea takes you.
+        </p>
+
+      </div>
+
+      <a href="#topics" class="cta-button">
+        Explore Topics
+      </a>
+
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+
+</body>
+</html>
